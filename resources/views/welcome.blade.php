@@ -58,7 +58,7 @@
       <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           <div class="col-sm-2">
-            <div class="card card-body">
+            <div class="card">
               <img src="/img/bobesponja.png" class="bd-placeholder-img card-img-top" width="100">
               <rect width="100%" height="100%" fill="#55595c">
                 <div class="card-body">
@@ -137,7 +137,7 @@
     <p class="col-md-4 mb-0 text-muted">&copy; 2023 Company, Inc</p>
 
     <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-      <svg class="bi me-2" width="40" height="32"><img src="/img/icon.jfif" width="50px" heigth="70px"></svg>
+      <svg class="bi me-2" width="40" height="32"><img src="/ico/icon.jfif" width="50px" heigth="70px"></svg>
     </a>
 
     <ul class="nav col-md-4 justify-content-end">
