@@ -27,7 +27,7 @@
     <!-- LAYOUT: HEADER -->
       <!-- SECTION: Main menu -->
       <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <a class="navbar-brand" href="#"><img src="/img/icon.jfif" width="50px" heigth="70px"></a>
+        <a class="navbar-brand" href="#"><img src="/ico/icon.jfif" width="50px" heigth="70px"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" >
           <span class="navbar-toggler-icon"></span>
         </button>
