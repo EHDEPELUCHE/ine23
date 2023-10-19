@@ -1,3 +1,5 @@
+@extends('templates.master')
+
 <!doctype html>
 <!-- Bootstrap first template for Internet y Negocio Electrónico, University of Cadiz,
      since 2019, based on https://www.w3schools.com/bootstrap4/bootstrap_templates.asp -->
@@ -21,36 +23,11 @@
 
     <title>My INE project P1</title>
   </head>
+<body>
 
-  <body>
+@section('content-center')
 
-    <!-- LAYOUT: HEADER -->
-      <!-- SECTION: Main menu -->
-      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <a class="navbar-brand" href="#"><img src="/ico/icon.jfif" width="50px" heigth="70px"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav mr-auto me-auto mb-2 mb-md-0">
-            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Registrarse</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Iniciar Sesión</a></li>   
-          </ul>
-         
-          <form class="d-flex form-inline" role="search" METHOD= "GET" ACTION="buscador" >
-            <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-           </div>
-        </div>  
-      </nav>
-   
-
-
-     
-    <h1 align="center">Echa un vistazo a estos juegazos</h1>
-
+<h1 align="center">Echa un vistazo a estos juegazos</h1>
 <div class="container-fluid" style="margin-top:30px">
   <div class="row">
     <!-- CAMBIAR ESTO CUANDO TENGAMOS DB-->
@@ -101,7 +78,9 @@
       </div>
     </div>  
 
+@endsection
 
+@section('content-right')
     <!-- BLOCK: RIGHT -->
     <div class="col-sm-2 sidenav"> <!-- col-sm-2 means two out of twelve columns -->
       <!-- SECTION: Cards -->
@@ -127,33 +106,11 @@
   </div>           
 </div>
 
-
-
-
-    <!-- LAYOUT: FOOTER -->
-    <div class="jumbotron text-center" style="margin-bottom:0;padding:20px">
-    <div class="container">
-  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-    <p class="col-md-4 mb-0 text-muted">&copy; 2023 Company, Inc</p>
-
-    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-      <svg class="bi me-2" width="40" height="32"><img src="/ico/icon.jfif" width="50px" heigth="70px"></svg>
-    </a>
-
-    <ul class="nav col-md-4 justify-content-end">
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-    </ul>
-  </footer>
-</div>
-    </div>
+@endsection    
 
     <!-- Loading Javascripts -->   
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>')</script>
+    <script>window.jQuery || document.write('https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"')></script></script>
     <!-- <script src="../../assets/js/vendor/popper.min.js"></script> -->
     <script src="js/bootstrap.min.js"></script>
   </body>
