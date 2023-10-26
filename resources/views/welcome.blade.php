@@ -25,9 +25,9 @@
                     </div>
                                        
                     @if($jueguito->HasDiscount())
-                    <small class="text-muted"><font color="#DC143C">
+                    <small class="text-muted"><font color="#DC143C">OFERTÓN</font>
                       {{number_format($jueguito->DiscountApplied(), 2) . " €"}}
-                    </font>
+                    
                     @else
                     <small class="text-muted">
                       {{$jueguito->price . " €"}}
