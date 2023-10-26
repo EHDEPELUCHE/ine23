@@ -23,13 +23,14 @@
                         <button type="submit" class="btn btn-sm btn-outline-secondary">Ver Info</button>
                       </form>
                     </div>
-                       <small class="text-muted">                 
+                                       
                     @if($jueguito->HasDiscount())
-                    
-                      {{number_format($jueguito->DiscountApplied(), 2)}}
+                    <small class="text-muted"><font color="#DC143C">
+                      {{number_format($jueguito->DiscountApplied(), 2) . " €"}}
+                    </font>
                     @else
-                    
-                      {{$jueguito->price}}
+                    <small class="text-muted">
+                      {{$jueguito->price . " €"}}
                     @endif
 
                     </small>
