@@ -25,7 +25,7 @@
                     </div>
                                         
                     @if($jueguito->HasDiscount())
-                    <small class="text-muted" color="#Ff0000">
+                    <small class="text-muted"><font color="#DC143C">
                       {{number_format($jueguito->DiscountApplied(), 2)}}
                     @else
                     <small class="text-muted">
