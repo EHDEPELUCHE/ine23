@@ -18,9 +18,8 @@ class Product extends Model
 
     static function NewProducts() { 
         $sNow = date('Y-m-d H:i:s'); 
-        $sNextWeek = date('Y-m-d H:i:s', strtotime($sNow . ' + 1 week')); 
-        return Product::where(DB::raw('date_format(updated_at,  
-        "%Y-%m-%d")'), '>=', date('Y-m-d', strtotime($sNow))) ->where('updated_at', '<=', date('Y-m-d', strtotime($sNextWeek))) ->get(); 
+        return Product::where(DB::raw
+        ('date_format(DATE_ADD(updated_at , INTERVAL 7 DAY),  "%Y-%m-%d")'), '>=', date('Y-m-d', strtotime($sNow)))->get();
     } 
 
     function HasDiscount() {
