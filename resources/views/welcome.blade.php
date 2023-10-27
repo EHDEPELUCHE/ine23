@@ -2,7 +2,7 @@
 
 @section('content-center')
 
-<h1 align="center">Echa un vistazo a estos juegazos</h1>
+<h1 align="center">Últimos lanzamientos</h1>
 <div class="container-fluid" style="margin-top:30px">
   <div class="row">
     <!-- CAMBIAR ESTO CUANDO TENGAMOS DB-->
@@ -11,9 +11,10 @@
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
           @foreach ($aProduct_new as $jueguito)
+          
           <div class="col-sm-2">
             <div class="card">
-              <img src={{$jueguito->imgUrl}} class="bd-placeholder-img card-img-top" width="100">
+              <img src={{$jueguito->imgUrl}} class="bd-placeholder-img card-img-top" width="100%">
               <rect width="100%" height="100%" fill="#55595c">
                 <div class="card-body">
                   <h2 class="card_text">{{$jueguito->name}}</h2>
@@ -25,8 +26,8 @@
                     </div>
                                        
                     @if($jueguito->HasDiscount())
-                    <small class="text-muted"><font color="#DC143C">OFERTÓN</font>
-                      {{number_format($jueguito->DiscountApplied(), 2) . " €"}}
+                    <small class="text-muted"><font color="#DC143C" face="Impact" >OFERTÓN</font>
+                      <font face="Impact" >{{number_format($jueguito->DiscountApplied(), 2) . " €"}}</font>
                     
                     @else
                     <small class="text-muted">
