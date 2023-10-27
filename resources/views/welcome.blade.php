@@ -52,7 +52,7 @@
     <!-- BLOCK: RIGHT -->
     <div class="col-sm-2 sidenav"> <!-- col-sm-2 means two out of twelve columns -->
       <!-- SECTION: Cards -->
-      <h2>Ofertas</h2>
+      <h2 align="center"><font face="Impact" >Ofertas</font></h2>
       <!-- RECORRO LOS PRODUCTOS EN OFERTA -->
       @foreach ($aProduct_offering as $ofertita)
       <div class="card card-body bg-faded" style="background-color: #0ff; margin-bottom:15px;">
