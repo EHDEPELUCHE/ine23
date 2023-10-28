@@ -18,6 +18,7 @@
     
     <style>
       .fakeimg { height: 100px; background: #aaa; }
+      ::-webkit-scrollbar { display:none; }
     </style>
 
     <title>My INE project P1</title>
