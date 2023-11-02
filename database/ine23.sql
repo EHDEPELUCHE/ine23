@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-10-2023 a las 19:35:11
+-- Tiempo de generación: 02-11-2023 a las 20:19:19
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -20,6 +20,28 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `ine23`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `companies`
+--
+
+CREATE TABLE `companies` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(128) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `companies`
+--
+
+INSERT INTO `companies` (`id`, `name`, `created_at`, `updated_at`) VALUES
+(1, 'Nintendo', '2023-11-02 13:56:25', '2023-11-02 13:56:25'),
+(2, 'Sony', '2023-11-02 13:56:46', '2023-11-02 13:56:46'),
+(3, 'Microsoft', '2023-11-02 13:57:04', '2023-11-02 13:57:04');
 
 -- --------------------------------------------------------
 
@@ -63,7 +85,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (52, '2020_05_21_200000_create_team_user_table', 1),
 (53, '2020_05_21_300000_create_team_invitations_table', 1),
 (54, '2023_09_27_183334_create_sessions_table', 1),
-(55, '2023_10_26_131410_create_products_table', 1);
+(55, '2023_10_26_131410_create_products_table', 1),
+(59, '2023_11_02_140843_create_company_table', 2),
+(60, '2023_11_02_141323_add_company_to_products_table', 2);
 
 -- --------------------------------------------------------
 
@@ -104,6 +128,7 @@ CREATE TABLE `personal_access_tokens` (
 
 CREATE TABLE `products` (
   `id` bigint(20) UNSIGNED NOT NULL,
+  `company_id` bigint(20) UNSIGNED DEFAULT NULL,
   `name` varchar(128) NOT NULL,
   `description` varchar(255) DEFAULT NULL,
   `imgUrl` varchar(255) NOT NULL,
@@ -119,12 +144,12 @@ CREATE TABLE `products` (
 -- Volcado de datos para la tabla `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `description`, `imgUrl`, `price`, `discountPercent`, `discountStart_at`, `discountEnd_at`, `created_at`, `updated_at`) VALUES
-(1, 'Bob Esponja', 'Bob Esponja se verá embarcado en una odisea para arrebatar la fórmula de la burguer cangreburguer de las manos del villano Plankton.', 'img/card-000001.jpg', 29.99, 10, '2023-11-09', '2023-11-19', '2023-10-26 11:42:20', '2023-10-26 11:42:20'),
-(2, 'The Last of Us', 'Joel tendrá que enfrentarse junto a Ellie, una chica que es más de lo que parece, a un futuro incierto en un mundo hostil.', 'img/card-000002.jpg', 39.99, 25, '2023-10-20', '2023-10-30', '2023-10-26 11:59:00', '2023-10-26 11:59:00'),
-(3, 'Cooking Mama', 'Cooking Mama es un trepidante simulador de cocina en el que acompañaremos a un chef virtual el cual nos guiará por deliciosas recetas.', 'img/card-000003.jpg', 19.99, 5, '2023-10-20', '2023-10-30', '2023-10-26 12:02:29', '2023-10-26 12:02:29'),
-(4, 'Grand Theft Auto V', 'Grand Theft Auto V es la nueva entrada de una franquicia que de nuevo nos trae sangre, vísceras, sexo y mucha macarranería de la mano de los desarrolladores de Rockstar Games.', 'img/card-000004.jpg', 19.99, 50, '2023-10-20', '2023-10-30', '2023-10-26 12:05:47', '2023-10-26 12:05:47'),
-(5, 'Fire Emblem Fates', 'Fire Emblem Fates es la entrada más trepidante de la famosísima saga Fire Emblem de rol y estrategia japonés.', 'img/card-000005.jpg', 19.99, 10, '2023-10-20', '2023-10-30', '2023-10-26 12:08:09', '2023-10-26 12:08:09');
+INSERT INTO `products` (`id`, `company_id`, `name`, `description`, `imgUrl`, `price`, `discountPercent`, `discountStart_at`, `discountEnd_at`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Bob Esponja', 'Bob Esponja se verá embarcado en una odisea para arrebatar la fórmula de la burguer cangreburguer de las manos del villano Plankton.', 'img/card-000001.jpg', 29.99, 10, '2023-11-09', '2023-11-19', '2023-10-26 11:42:20', '2023-10-26 11:42:20'),
+(2, 2, 'The Last of Us', 'Joel tendrá que enfrentarse junto a Ellie, una chica que es más de lo que parece, a un futuro incierto en un mundo hostil.', 'img/card-000002.jpg', 39.99, 25, '2023-10-20', '2023-10-30', '2023-10-26 11:59:00', '2023-10-26 11:59:00'),
+(3, 3, 'Cooking Mama', 'Cooking Mama es un trepidante simulador de cocina en el que acompañaremos a un chef virtual el cual nos guiará por deliciosas recetas.', 'img/card-000003.jpg', 19.99, 5, '2023-10-20', '2023-10-30', '2023-10-26 12:02:29', '2023-10-26 12:02:29'),
+(4, NULL, 'Grand Theft Auto V', 'Grand Theft Auto V es la nueva entrada de una franquicia que de nuevo nos trae sangre, vísceras, sexo y mucha macarranería de la mano de los desarrolladores de Rockstar Games.', 'img/card-000004.jpg', 19.99, 50, '2023-10-20', '2023-10-30', '2023-10-26 12:05:47', '2023-10-26 12:05:47'),
+(5, NULL, 'Fire Emblem Fates', 'Fire Emblem Fates es la entrada más trepidante de la famosísima saga Fire Emblem de rol y estrategia japonés.', 'img/card-000005.jpg', 19.99, 10, '2023-10-20', '2023-10-30', '2023-10-26 12:08:09', '2023-10-26 12:08:09');
 
 -- --------------------------------------------------------
 
@@ -146,7 +171,8 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('GEgFHWNAsqNm7jdIf1rrr4lbr5RmfcO2UNmMncG8', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 Edg/118.0.2088.61', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiVVAxSEhUb3V2c3dEOFhXZ1NRcEFIQmpSMUlzT1ZmN29yNU9CSzlhMSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1698333180);
+('hjlaPmu4x1jstPmTklXxqyeHAVMciYZOUm4LuUoj', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 Edg/118.0.2088.76', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoibkdrZjE0ZEZVWmJESWdxSWV4Vk4xRXZVNGJTWDhrWFRaQkUzREtJUSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9wcm9kdWN0LzIiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1698952749),
+('luUMTP3kzSFpyF2HXmvUOhWoFo7qObrBtF9WglL5', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 Edg/118.0.2088.76', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiSTJlTVBKYTVudzlKSVRzSnZyVlA4ekF1dkpQaURyNklmUVcyV3FKVCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9wcm9kdWN0LzIiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1698941744);
 
 -- --------------------------------------------------------
 
@@ -220,6 +246,13 @@ CREATE TABLE `users` (
 --
 
 --
+-- Indices de la tabla `companies`
+--
+ALTER TABLE `companies`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `companies_name_unique` (`name`);
+
+--
 -- Indices de la tabla `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
@@ -250,7 +283,8 @@ ALTER TABLE `personal_access_tokens`
 -- Indices de la tabla `products`
 --
 ALTER TABLE `products`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `products_company_id_foreign` (`company_id`);
 
 --
 -- Indices de la tabla `sessions`
@@ -293,6 +327,12 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `companies`
+--
+ALTER TABLE `companies`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT de la tabla `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
@@ -302,7 +342,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT de la tabla `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT de la tabla `personal_access_tokens`
@@ -343,6 +383,12 @@ ALTER TABLE `users`
 --
 -- Restricciones para tablas volcadas
 --
+
+--
+-- Filtros para la tabla `products`
+--
+ALTER TABLE `products`
+  ADD CONSTRAINT `products_company_id_foreign` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`);
 
 --
 -- Filtros para la tabla `team_invitations`

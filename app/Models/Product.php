@@ -32,4 +32,8 @@ class Product extends Model
     function DiscountApplied() {
         return (float) $this->price - ($this->price * $this->discountPercent) / 100;
     }
+
+    function Company(){
+        return $this->belongsTo(Company::class);
+    }
 }
