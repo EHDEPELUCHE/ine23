@@ -1,7 +1,6 @@
 @extends('templates.master')
 
 @section('content-center')
-
 <h1 align="center">Últimos lanzamientos</h1>
 <div class="container-fluid" style="margin-top:30px">
   <div class="row">
@@ -42,7 +41,6 @@
         </div>
       </div>
     </div>  
-
 @endsection
 
 @section('content-right')
@@ -72,5 +70,4 @@
     </div>
   </div>           
 </div>
-
 @endsection    
