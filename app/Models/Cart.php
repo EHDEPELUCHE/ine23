@@ -37,7 +37,7 @@ class Cart extends Model
     }
 
     public function remove (Product $product) {
-        if (array_key_exists($product->id, $this->htItem)){            
+        if (array_key_exists($product->id, $this->htItem) && $this->htItem[$product->id]['quantity'] >0){            
             $this->htItem[$product->id] = array('id' => $product->id,
                 'name' => $product->name, 'price' => $product->price,
                 'imgUrl' => $product->imgUrl, 

@@ -21,12 +21,17 @@
                                 <div class="d-flex justify-content-between align-items-center">                                                    
                                     <small class="text-muted">
                                         {{$jueguito['price'] . " €"}}
-                                        <a href={{ route('cart.operate',  [ 'operation' => 'add', 'product' => $jueguito[ 'id' ]]) }}>[+]</a>
-                                        {{"cantidad: " . $jueguito['quantity']}}
-                                        <a href={{ route('cart.operate', [ 'operation' => 'remove', 'product' => $jueguito['id']]) }}>[-]</a>
-                                        <a href={{ route('cart.operate', [ 'operation' => 'removeAll', 'product' => $jueguito['id']]) }}>Eliminar del carro</a>
+                                       
                                     </small>
+                                    
                                 </div>
+                                <div>
+                                <a class="btn btn-secondary" href={{ route('cart.operate', [ 'operation' => 'removeAll', 'product' => $jueguito['id']]) }}>Eliminar del carro</a>
+                                <a class="btn btn-secondary" href={{ route('cart.operate', [ 'operation' => 'remove', 'product' => $jueguito['id']]) }}>[-]</a>
+                                  {{"cantidad: " . $jueguito['quantity']}}
+                                <a class="btn btn-secondary" href={{ route('cart.operate',  [ 'operation' => 'add', 'product' => $jueguito[ 'id' ]]) }}>[+]</a>
+                                              
+                                 </div>
                             </div>
                         </rect>
                     </div>

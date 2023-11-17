@@ -19,11 +19,12 @@
       else
       $items=0;
       @endphp
+      <ul class="navbar-nav mr-auto mb-2 mb-md-0">
       <li class="nav-item"><a class="nav-link" href='/cart' ><img src="/img/carrito.png" width="40px" heigth="40px"></a></li>
       @if($items>0)
-        <font color="white"> {{$items}} </font>
+        <font color="white"> {{$items}}  </font>
       @endif
-      
+</ul>
       <form class="d-flex form-inline" role="search" METHOD= "GET" ACTION="buscador" >
         <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
