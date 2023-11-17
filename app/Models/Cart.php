@@ -33,6 +33,7 @@ class Cart extends Model
                 'quantity' => 1);
         $this->iTotalItems++;
         $this->dTotalPrice += $product->price;
+        return $this;
     }
 
     public function remove (Product $product) {
@@ -44,6 +45,7 @@ class Cart extends Model
             $this->iTotalItems--;
             $this->dTotalPrice -= $product->price;
         }
+        return $this;
     }
 
     public function removeAll (Product $product) {
@@ -52,5 +54,6 @@ class Cart extends Model
             $this->dTotalPrice -= $product->price * $this->htItem[$product->id]['quantity'];
             unset($this->htItem[$product->id]);
         }
+        return $this;
     }
 }

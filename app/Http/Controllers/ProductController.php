@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Cart;
 
 class ProductController extends Controller
 {
@@ -14,6 +15,15 @@ class ProductController extends Controller
     }
 
     static function show(Product $product){
+        return view('product.show', compact('product'));
+    }
+
+   
+    public function addToCart(Product $product, Request $request){
+        $cart = new Cart($request->session()->get('cart'));
+        $cart->add($product);
+        $request->session()->put('cart', $cart);
+        //dd($cart);
         return view('product.show', compact('product'));
     }
 }

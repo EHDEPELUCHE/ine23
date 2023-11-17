@@ -20,6 +20,15 @@ Route::get('/', [ProductController::class, 'Welcome'])
 Route::get('/product/{product}', [ProductController::class, 'show'])
     ->name('product.show');
 
+Route::get('/cart', [CartController::class, 'show'])
+    ->name('cart.show');
+
+Route::get('/cart/operate/{operation}/{product}', [CartController::class, 'operate'])
+    ->name('cart.operate');
+
+Route::get('/addToCart/{product}',
+    [ProductController::class, 'addToCart'])->name('cart.add');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

@@ -19,7 +19,7 @@ class Product extends Model
     static function NewProducts() { 
         $sNow = date('Y-m-d H:i:s'); 
         return Product::where(DB::raw
-        ('date_format(DATE_ADD(updated_at , INTERVAL 7 DAY),  "%Y-%m-%d")'), '>=', date('Y-m-d', strtotime($sNow)))->get();
+        ('date_format(DATE_ADD(updated_at , INTERVAL 200 DAY),  "%Y-%m-%d")'), '>=', date('Y-m-d', strtotime($sNow)))->get();
     } 
 
     function HasDiscount() {

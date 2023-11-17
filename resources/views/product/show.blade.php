@@ -9,6 +9,8 @@
             <h2 class="card_text">Empresa: {{$product->Company->name}}</h2>
             <p> {{$product->description}} <p>
             </div>
+            <a class="btn btn-primary" href={{ route('cart.add', $product) }} ><img src="/img/add_carrito.png" width="50px" heigth="50px"></a>
+            
         </div>
     </div>
     <div class="col-sm-5 ">

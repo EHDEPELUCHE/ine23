@@ -1,5 +1,6 @@
 <!-- LAYOUT: HEADER -->
       <!-- SECTION: Main menu -->
+ 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="/"><img src="/ico/icon.jfif" width="50px" heigth="70px"></a>
@@ -12,6 +13,16 @@
         <li class="nav-item"><a class="nav-link" href="#">Registrarse</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Iniciar Sesión</a></li>   
       </ul>
+      @php
+      if(session()->get('cart') != null)
+        $items = session()->get('cart')->iTotalItems;
+      else
+      $items=0;
+      @endphp
+      <li class="nav-item"><a class="nav-link" href='/cart' ><img src="/img/carrito.png" width="40px" heigth="40px"></a></li>
+      @if($items>0)
+        <font color="white"> {{$items}} </font>
+      @endif
       
       <form class="d-flex form-inline" role="search" METHOD= "GET" ACTION="buscador" >
         <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search">
