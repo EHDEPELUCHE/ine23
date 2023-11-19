@@ -26,10 +26,10 @@
                                     
                                 </div>
                                 <div>
-                                <a class="btn btn-secondary" href={{ route('cart.operate', [ 'operation' => 'removeAll', 'product' => $jueguito['id']]) }}>Eliminar del carro</a>
-                                <a class="btn btn-secondary" href={{ route('cart.operate', [ 'operation' => 'remove', 'product' => $jueguito['id']]) }}>[-]</a>
+                                <a class="btn btn-light" href={{ route('cart.operate', [ 'operation' => 'removeAll', 'product' => $jueguito['id']]) }}><img src="/img/papelera.png" width="30px" heigth="30px"></a>
+                                <a class="btn btn-light" href={{ route('cart.operate', [ 'operation' => 'remove', 'product' => $jueguito['id']]) }}><img src="/img/remove_carrito.png" width="30px" heigth="30px"></a>
                                   {{"cantidad: " . $jueguito['quantity']}}
-                                <a class="btn btn-secondary" href={{ route('cart.operate',  [ 'operation' => 'add', 'product' => $jueguito[ 'id' ]]) }}>[+]</a>
+                                <a class="btn btn-light" href={{ route('cart.operate',  [ 'operation' => 'add', 'product' => $jueguito[ 'id' ]]) }}><img src="/img/add_carrito.png" width="30px" heigth="30px"></a>
                                               
                                  </div>
                             </div>

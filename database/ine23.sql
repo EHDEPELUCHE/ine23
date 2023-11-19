@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-11-2023 a las 20:19:19
+-- Tiempo de generación: 19-11-2023 a las 09:38:54
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -148,8 +148,8 @@ INSERT INTO `products` (`id`, `company_id`, `name`, `description`, `imgUrl`, `pr
 (1, 1, 'Bob Esponja', 'Bob Esponja se verá embarcado en una odisea para arrebatar la fórmula de la burguer cangreburguer de las manos del villano Plankton.', 'img/card-000001.jpg', 29.99, 10, '2023-11-09', '2023-11-19', '2023-10-26 11:42:20', '2023-10-26 11:42:20'),
 (2, 2, 'The Last of Us', 'Joel tendrá que enfrentarse junto a Ellie, una chica que es más de lo que parece, a un futuro incierto en un mundo hostil.', 'img/card-000002.jpg', 39.99, 25, '2023-10-20', '2023-10-30', '2023-10-26 11:59:00', '2023-10-26 11:59:00'),
 (3, 3, 'Cooking Mama', 'Cooking Mama es un trepidante simulador de cocina en el que acompañaremos a un chef virtual el cual nos guiará por deliciosas recetas.', 'img/card-000003.jpg', 19.99, 5, '2023-10-20', '2023-10-30', '2023-10-26 12:02:29', '2023-10-26 12:02:29'),
-(4, NULL, 'Grand Theft Auto V', 'Grand Theft Auto V es la nueva entrada de una franquicia que de nuevo nos trae sangre, vísceras, sexo y mucha macarranería de la mano de los desarrolladores de Rockstar Games.', 'img/card-000004.jpg', 19.99, 50, '2023-10-20', '2023-10-30', '2023-10-26 12:05:47', '2023-10-26 12:05:47'),
-(5, NULL, 'Fire Emblem Fates', 'Fire Emblem Fates es la entrada más trepidante de la famosísima saga Fire Emblem de rol y estrategia japonés.', 'img/card-000005.jpg', 19.99, 10, '2023-10-20', '2023-10-30', '2023-10-26 12:08:09', '2023-10-26 12:08:09');
+(4, 3, 'Grand Theft Auto V', 'Grand Theft Auto V es la nueva entrada de una franquicia que de nuevo nos trae sangre, vísceras, sexo y mucha macarranería de la mano de los desarrolladores de Rockstar Games.', 'img/card-000004.jpg', 19.99, 50, '2023-10-20', '2023-10-30', '2023-10-26 12:05:47', '2023-10-26 12:05:47'),
+(5, 1, 'Fire Emblem Fates', 'Fire Emblem Fates es la entrada más trepidante de la famosísima saga Fire Emblem de rol y estrategia japonés.', 'img/card-000005.jpg', 19.99, 10, '2023-10-20', '2023-10-30', '2023-10-26 12:08:09', '2023-10-26 12:08:09');
 
 -- --------------------------------------------------------
 
@@ -171,8 +171,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('hjlaPmu4x1jstPmTklXxqyeHAVMciYZOUm4LuUoj', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 Edg/118.0.2088.76', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoibkdrZjE0ZEZVWmJESWdxSWV4Vk4xRXZVNGJTWDhrWFRaQkUzREtJUSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9wcm9kdWN0LzIiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1698952749),
-('luUMTP3kzSFpyF2HXmvUOhWoFo7qObrBtF9WglL5', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 Edg/118.0.2088.76', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiSTJlTVBKYTVudzlKSVRzSnZyVlA4ekF1dkpQaURyNklmUVcyV3FKVCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9wcm9kdWN0LzIiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1698941744);
+('yfSyZjaKL4hNDp7LarCRiW9Fl0U2Ykr5YZegsmTX', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiZjBSeEdqeTBHVGlTTzByZ1p2OGZTdjZPcEdrb0NTdmcyaUZab0FQMSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NDoiY2FydCI7TzoxNToiQXBwXE1vZGVsc1xDYXJ0IjozMzp7czoxMzoiACoAY29ubmVjdGlvbiI7TjtzOjg6IgAqAHRhYmxlIjtOO3M6MTM6IgAqAHByaW1hcnlLZXkiO3M6MjoiaWQiO3M6MTA6IgAqAGtleVR5cGUiO3M6MzoiaW50IjtzOjEyOiJpbmNyZW1lbnRpbmciO2I6MTtzOjc6IgAqAHdpdGgiO2E6MDp7fXM6MTI6IgAqAHdpdGhDb3VudCI7YTowOnt9czoxOToicHJldmVudHNMYXp5TG9hZGluZyI7YjowO3M6MTA6IgAqAHBlclBhZ2UiO2k6MTU7czo2OiJleGlzdHMiO2I6MDtzOjE4OiJ3YXNSZWNlbnRseUNyZWF0ZWQiO2I6MDtzOjI4OiIAKgBlc2NhcGVXaGVuQ2FzdGluZ1RvU3RyaW5nIjtiOjA7czoxMzoiACoAYXR0cmlidXRlcyI7YTowOnt9czoxMToiACoAb3JpZ2luYWwiO2E6MDp7fXM6MTA6IgAqAGNoYW5nZXMiO2E6MDp7fXM6ODoiACoAY2FzdHMiO2E6MDp7fXM6MTc6IgAqAGNsYXNzQ2FzdENhY2hlIjthOjA6e31zOjIxOiIAKgBhdHRyaWJ1dGVDYXN0Q2FjaGUiO2E6MDp7fXM6MTM6IgAqAGRhdGVGb3JtYXQiO047czoxMDoiACoAYXBwZW5kcyI7YTowOnt9czoxOToiACoAZGlzcGF0Y2hlc0V2ZW50cyI7YTowOnt9czoxNDoiACoAb2JzZXJ2YWJsZXMiO2E6MDp7fXM6MTI6IgAqAHJlbGF0aW9ucyI7YTowOnt9czoxMDoiACoAdG91Y2hlcyI7YTowOnt9czoxMDoidGltZXN0YW1wcyI7YjoxO3M6MTM6InVzZXNVbmlxdWVJZHMiO2I6MDtzOjk6IgAqAGhpZGRlbiI7YTowOnt9czoxMDoiACoAdmlzaWJsZSI7YTowOnt9czoxMToiACoAZmlsbGFibGUiO2E6MDp7fXM6MTA6IgAqAGd1YXJkZWQiO2E6MTp7aTowO3M6MToiKiI7fXM6NjoiaHRJdGVtIjthOjI6e2k6MzthOjU6e3M6MjoiaWQiO2k6MztzOjQ6Im5hbWUiO3M6MTI6IkNvb2tpbmcgTWFtYSI7czo1OiJwcmljZSI7ZDoxOS45OTtzOjY6ImltZ1VybCI7czoxOToiaW1nL2NhcmQtMDAwMDAzLmpwZyI7czo4OiJxdWFudGl0eSI7aToxO31pOjI7YTo1OntzOjI6ImlkIjtpOjI7czo0OiJuYW1lIjtzOjE0OiJUaGUgTGFzdCBvZiBVcyI7czo1OiJwcmljZSI7ZDozOS45OTtzOjY6ImltZ1VybCI7czoxOToiaW1nL2NhcmQtMDAwMDAyLmpwZyI7czo4OiJxdWFudGl0eSI7aToyO319czoxMToiaVRvdGFsSXRlbXMiO2k6MztzOjExOiJkVG90YWxQcmljZSI7ZDo5OS45NzAwMDAwMDAwMDAwMTt9fQ==', 1700216608);
 
 -- --------------------------------------------------------
 
