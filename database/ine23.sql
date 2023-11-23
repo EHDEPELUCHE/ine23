@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-11-2023 a las 09:38:54
+-- Tiempo de generación: 23-11-2023 a las 16:24:32
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -171,7 +171,8 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('yfSyZjaKL4hNDp7LarCRiW9Fl0U2Ykr5YZegsmTX', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiZjBSeEdqeTBHVGlTTzByZ1p2OGZTdjZPcEdrb0NTdmcyaUZab0FQMSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NDoiY2FydCI7TzoxNToiQXBwXE1vZGVsc1xDYXJ0IjozMzp7czoxMzoiACoAY29ubmVjdGlvbiI7TjtzOjg6IgAqAHRhYmxlIjtOO3M6MTM6IgAqAHByaW1hcnlLZXkiO3M6MjoiaWQiO3M6MTA6IgAqAGtleVR5cGUiO3M6MzoiaW50IjtzOjEyOiJpbmNyZW1lbnRpbmciO2I6MTtzOjc6IgAqAHdpdGgiO2E6MDp7fXM6MTI6IgAqAHdpdGhDb3VudCI7YTowOnt9czoxOToicHJldmVudHNMYXp5TG9hZGluZyI7YjowO3M6MTA6IgAqAHBlclBhZ2UiO2k6MTU7czo2OiJleGlzdHMiO2I6MDtzOjE4OiJ3YXNSZWNlbnRseUNyZWF0ZWQiO2I6MDtzOjI4OiIAKgBlc2NhcGVXaGVuQ2FzdGluZ1RvU3RyaW5nIjtiOjA7czoxMzoiACoAYXR0cmlidXRlcyI7YTowOnt9czoxMToiACoAb3JpZ2luYWwiO2E6MDp7fXM6MTA6IgAqAGNoYW5nZXMiO2E6MDp7fXM6ODoiACoAY2FzdHMiO2E6MDp7fXM6MTc6IgAqAGNsYXNzQ2FzdENhY2hlIjthOjA6e31zOjIxOiIAKgBhdHRyaWJ1dGVDYXN0Q2FjaGUiO2E6MDp7fXM6MTM6IgAqAGRhdGVGb3JtYXQiO047czoxMDoiACoAYXBwZW5kcyI7YTowOnt9czoxOToiACoAZGlzcGF0Y2hlc0V2ZW50cyI7YTowOnt9czoxNDoiACoAb2JzZXJ2YWJsZXMiO2E6MDp7fXM6MTI6IgAqAHJlbGF0aW9ucyI7YTowOnt9czoxMDoiACoAdG91Y2hlcyI7YTowOnt9czoxMDoidGltZXN0YW1wcyI7YjoxO3M6MTM6InVzZXNVbmlxdWVJZHMiO2I6MDtzOjk6IgAqAGhpZGRlbiI7YTowOnt9czoxMDoiACoAdmlzaWJsZSI7YTowOnt9czoxMToiACoAZmlsbGFibGUiO2E6MDp7fXM6MTA6IgAqAGd1YXJkZWQiO2E6MTp7aTowO3M6MToiKiI7fXM6NjoiaHRJdGVtIjthOjI6e2k6MzthOjU6e3M6MjoiaWQiO2k6MztzOjQ6Im5hbWUiO3M6MTI6IkNvb2tpbmcgTWFtYSI7czo1OiJwcmljZSI7ZDoxOS45OTtzOjY6ImltZ1VybCI7czoxOToiaW1nL2NhcmQtMDAwMDAzLmpwZyI7czo4OiJxdWFudGl0eSI7aToxO31pOjI7YTo1OntzOjI6ImlkIjtpOjI7czo0OiJuYW1lIjtzOjE0OiJUaGUgTGFzdCBvZiBVcyI7czo1OiJwcmljZSI7ZDozOS45OTtzOjY6ImltZ1VybCI7czoxOToiaW1nL2NhcmQtMDAwMDAyLmpwZyI7czo4OiJxdWFudGl0eSI7aToyO319czoxMToiaVRvdGFsSXRlbXMiO2k6MztzOjExOiJkVG90YWxQcmljZSI7ZDo5OS45NzAwMDAwMDAwMDAwMTt9fQ==', 1700216608);
+('6d5oBUxGtI4eHEvBXOjshV9Td8aYbF1WgCEzAY6b', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiSlZ2SjZQNlBXMktGRjFOelcxazJ4MGJNREtYbXVEaXJzbzJlYUFUWCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoyMToicGFzc3dvcmRfaGFzaF9zYW5jdHVtIjtzOjYwOiIkMnkkMTAkaDlJbFZ3SE04TXNLSGpLamJ2TlF1T0R1WjRubHJheVd3SS9GcEJBcGVjek9CZkpHeDVJcE8iO30=', 1700752934),
+('jLm94XdNCmtM21kT8xtQoe4oJCU4T0xT5EHX92ov', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0', 'YTo1OntzOjM6InVybCI7YTowOnt9czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NjoiX3Rva2VuIjtzOjQwOiJFdVBzZmxsR3JwajQzaGgyVXhXZXNFeURzV1FMNWZ1WnFDVzRGaVJZIjtzOjIxOiJwYXNzd29yZF9oYXNoX3NhbmN0dW0iO3M6NjA6IiQyeSQxMCRaWGNlTGEyNzJySTZHWE9XdDhqRUhlbG5HV1NRRXBBQkFPOFVvbDFBaXlCQ3l1L0xsNWkuLiI7fQ==', 1700752594);
 
 -- --------------------------------------------------------
 
@@ -187,6 +188,14 @@ CREATE TABLE `teams` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `teams`
+--
+
+INSERT INTO `teams` (`id`, `user_id`, `name`, `personal_team`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Álvaro\'s Team', 1, '2023-11-23 13:42:13', '2023-11-23 13:42:13'),
+(2, 2, 'Elena\'s Team', 1, '2023-11-23 14:14:39', '2023-11-23 14:14:39');
 
 -- --------------------------------------------------------
 
@@ -239,6 +248,14 @@ CREATE TABLE `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `two_factor_confirmed_at`, `remember_token`, `current_team_id`, `profile_photo_path`, `created_at`, `updated_at`) VALUES
+(1, 'Álvaro', 'alvaroperezvargas2001@gmail.com', NULL, '$2y$10$h9IlVwHM8MsKHjKjbvNQuODuZ4nlrayWwI/FpBApeczOBfJGx5IpO', NULL, NULL, NULL, 'dgDe0Hq8qXn1PAa05ksEdr7oC26Dk7bDsakFnqYBpdeBWBJa8GDvUFffhJWU', 1, NULL, '2023-11-23 13:42:13', '2023-11-23 13:42:15'),
+(2, 'Elena', 'elena.vazrodri@alum.uca.es', NULL, '$2y$10$ZXceLa272rI6GXOWt8jEHelnGWSQEpABAO8Uol1AiyBCyu/Ll5i..', NULL, NULL, NULL, NULL, NULL, NULL, '2023-11-23 14:14:39', '2023-11-23 14:14:39');
 
 --
 -- Índices para tablas volcadas
@@ -359,7 +376,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT de la tabla `teams`
 --
 ALTER TABLE `teams`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `team_invitations`
@@ -377,7 +394,7 @@ ALTER TABLE `team_user`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restricciones para tablas volcadas
