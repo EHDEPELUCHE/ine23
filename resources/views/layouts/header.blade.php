@@ -10,8 +10,14 @@
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav mr-auto me-auto mb-2 mb-md-0">
         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Registrarse</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Iniciar Sesión</a></li>   
+        
+        @if(Auth::check())
+        <li class="nav-item"><a class="nav-link" href="{{ route('login') }}"> {{Auth::user()->name}} </a> </li>
+        <li class="nav-item"><a class="nav-link" href="/user/logout"> X </a> </li>
+        @else
+        <li class="nav-item"><a class="nav-link" href="{{route('register')}}">Registrarse</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{route('login')}}">Iniciar Sesión</a></li> 
+        @endif
       </ul>
       @php
       if(session()->get('cart') != null)

@@ -29,12 +29,15 @@ Route::get('/cart/operate/{operation}/{product}', [CartController::class, 'opera
 Route::get('/addToCart/{product}',
     [ProductController::class, 'addToCart'])->name('cart.add');
 
+Route::get('/user/logout', 
+    [UserController::class, 'logout'])->name('user.logout');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return redirect('/');
     })->name('dashboard');
 });
