@@ -19,7 +19,7 @@ return [
     'Name' => 'Nombre',
     'Email' => 'Correo electrónico',
     'Password' => 'Contraseña',
-    'Confirm Password' => 'Confirmar contraseña',
+    'Confirm Password' => 'Confirmar Contraseña',
     'Already registered?' => '¿Ya está registrado?',
     'Register' => 'Regístrese',
     'Terms of Service' => 'Términos de Servicio',
