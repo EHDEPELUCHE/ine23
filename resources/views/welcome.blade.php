@@ -7,7 +7,6 @@
     <div class="col-sm-10">
       <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-
           @foreach ($aProduct_new as $jueguito) 
           <div class="col-sm-2">
             <div class="card">
@@ -21,15 +20,13 @@
                         <button type="submit" class="btn btn-sm btn-outline-secondary">Ver Info</button>
                       </form>
                     </div>
-                                       
                     @if($jueguito->HasDiscount())
-                    <small class="text-muted"><font color="#DC143C" face="Impact" >OFERTÓN</font>
-                      <font face="Impact" >{{number_format($jueguito->DiscountApplied(), 2) . " €"}}</font>
+                      <small class="text-muted"><font color="#DC143C" face="Impact" >OFERTÓN</font>
+                        <font face="Impact" >{{number_format($jueguito->DiscountApplied(), 2) . " €"}}</font>
                     @else
-                    <small class="text-muted">
-                      {{$jueguito->price . " €"}}
+                      <small class="text-muted">
+                        {{$jueguito->price . " €"}}
                     @endif
-
                     </small>
                   </div>
                 </div>
@@ -37,7 +34,6 @@
             </div>
           </div>
           @endforeach
-
         </div>
       </div>
     </div>  
