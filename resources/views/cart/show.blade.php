@@ -21,25 +21,23 @@
                                 <div class="d-flex justify-content-between align-items-center">                                                    
                                     <small class="text-muted">
                                         {{$jueguito['price'] . " €"}}
-                                       
                                     </small>
-                                    
                                 </div>
                                 <div>
                                 <a class="btn btn-light" href={{ route('cart.operate', [ 'operation' => 'removeAll', 'product' => $jueguito['id']]) }}><img src="/img/papelera.png" width="30px" heigth="30px"></a>
                                 <a class="btn btn-light" href={{ route('cart.operate', [ 'operation' => 'remove', 'product' => $jueguito['id']]) }}><img src="/img/remove_carrito.png" width="30px" heigth="30px"></a>
                                   {{"cantidad: " . $jueguito['quantity']}}
-                                <a class="btn btn-light" href={{ route('cart.operate',  [ 'operation' => 'add', 'product' => $jueguito[ 'id' ]]) }}><img src="/img/add_carrito.png" width="30px" heigth="30px"></a>
-                                              
-                                 </div>
+                                <a class="btn btn-light" href={{ route('cart.operate',  [ 'operation' => 'add', 'product' => $jueguito[ 'id' ]]) }}><img src="/img/add_carrito.png" width="30px" heigth="30px"></a>              
+                                </div>
                             </div>
                         </rect>
                     </div>
                 </div>
                 @endforeach
             @endif
-
         </div>
       </div>
-    </div>  
+    </div>
+  </div>
+</div>
 @endsection
