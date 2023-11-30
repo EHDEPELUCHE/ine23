@@ -29,5 +29,9 @@ return [
     'Forgot your password?' => '¿Has olvidado tu contraseña?',
     'Log in' => 'Iniciar Sesión',
     'Create Account' => 'Crear una Cuenta',
+    'Old password' => 'Contraseña antigua',
+    'New password' => 'Nueva contraseña',
+    'Repeat password' => 'Repita su contraseña',
+    'Save' => 'Guardar',
 
 ];

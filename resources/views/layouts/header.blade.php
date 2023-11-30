@@ -12,7 +12,7 @@
         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
         
         @if(Auth::check())
-        <li class="nav-item"><a class="nav-link" href="{{ route('login') }}"> {{Auth::user()->name}} </a> </li>
+        <li class="nav-item"><a class="nav-link" href="{{ route('user.edit') }}"> {{Auth::user()->name}} </a> </li>
         <li class="nav-item"><a class="nav-link" href="/user/logout"><img src="/img/logout.png" width="30px" heigth="30px" > </a> </li>
         @else
         <li class="nav-item"><a class="nav-link" href="{{route('register')}}">Registrarse</a></li>

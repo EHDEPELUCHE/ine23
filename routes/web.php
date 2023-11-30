@@ -32,12 +32,18 @@ Route::get('/addToCart/{product}',
 Route::get('/user/logout', 
     [UserController::class, 'logout'])->name('user.logout');
 
+Route::get('/user', [UserController::class, 'edit'])
+    ->name('user.edit');
+
+Route::patch('/user', [UserController::class, 'update'])  
+    ->name('user.update');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return redirect('/');
+        return view('dashboard');
     })->name('dashboard');
 });
