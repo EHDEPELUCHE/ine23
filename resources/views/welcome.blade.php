@@ -46,17 +46,17 @@
       <h2 align="center"><font face="Impact" >Ofertas</font></h2>
       <!-- RECORRO LOS PRODUCTOS EN OFERTA -->
       @if($aProduct_offering->empty())
-      <div class="card card-body bg-faded" style="background-color: #0ff; margin-bottom:15px;">
-        <h5>No hay ofertas disponibles.</h5><h6> Consulte más tarde.</h6>
-      </div>
+        <div class="card card-body bg-faded" style="background-color: #0ff; margin-bottom:15px;">
+          <h5>No hay ofertas disponibles.</h5><h6> Consulte más tarde.</h6>
+        </div>
       @else
-      @foreach ($aProduct_offering as $ofertita)
-      <div class="card card-body bg-faded" style="background-color: #0ff; margin-bottom:15px;">
-          <h4 class="card-title">{{$ofertita->name}}</h4>
-          <p class="card-text">{{$ofertita->description}}</p>
-          <a href="#" class="btn btn-primary">Ver Juego</a>
-      </div>
-      @endforeach
+        @foreach ($aProduct_offering as $ofertita)
+          <div class="card card-body bg-faded" style="background-color: #0ff; margin-bottom:15px;">
+              <h4 class="card-title">{{$ofertita->name}}</h4>
+              <p class="card-text">{{$ofertita->description}}</p>
+              <a href="#" class="btn btn-primary">Ver Juego</a>
+          </div>
+        @endforeach
       @endif
       <div class="card card-body bg-light" style="margin-bottom:15px;">
         <h4 class="card-title">¿Faltan Juegos?</h4>

@@ -5,9 +5,9 @@
     <div class="col-sm-7">
         <div class="card">
             <div class="card-body">
-            <h1 class="card_text">{{$product->name}}</h1>
-            <h2 class="card_text">Empresa: {{$product->Company->name}}</h2>
-            <p> {{$product->description}} <p>
+                <h1 class="card_text">{{$product->name}}</h1>
+                <h2 class="card_text">Empresa: {{$product->Company->name}}</h2>
+                <p> {{$product->description}} <p>
             </div>
             <div style="text-align: center" class="flex items-center justify-end mt-5">
                 <a style="color: black" class="btn btn-primary" href={{ route('cart.add', $product) }} >
