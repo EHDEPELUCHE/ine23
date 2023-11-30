@@ -31,7 +31,10 @@
                     <label for="repeatedPass">{{ __('auth.Repeat password') }}</label>
                     <input type="password" id="repeatedPass" name="repeatedPass" class="form-control" />
                 </div>
-                <button type="submit" class="btn btn-primary">{{ __('auth.Save') }}</button>
+                <div class="flex items-center justify-end mt-4">
+                    <button type="submit" class="btn btn-primary">{{ __('auth.Save') }}</button>          
+                </div>
+               
             </form>
         </div>
     </div>
