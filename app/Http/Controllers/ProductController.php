@@ -18,12 +18,22 @@ class ProductController extends Controller
         return view('product.show', compact('product'));
     }
 
-   
     public function addToCart(Product $product, Request $request){
         $cart = new Cart($request->session()->get('cart'));
         $cart->add($product);
         $request->session()->put('cart', $cart);
         //dd($cart);
         return view('product.show', compact('product'));
+    }
+
+    public function update(Product $product, Request $request) {
+        $product->name = $request->name;
+        $product->description = $request->description;
+        $product->save();
+        return back()->with(['success' => ['Los datos han sido modificados.']]);
+    }
+
+    public function edit(Product $product, Request $request) {
+        return view('product.edit', compact('product'));
     }
 }

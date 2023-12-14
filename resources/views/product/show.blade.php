@@ -1,6 +1,9 @@
 @extends('templates.master')
 
 @section('content-center')
+@foreach ($errors->all() as $sError)
+    <div class="alert alert-warning">{{ $sError }}</div>
+@endforeach
 <div class="row">
     <div class="col-sm-7">
         <div class="card">
@@ -10,9 +13,14 @@
                 <p> {{$product->description}} <p>
             </div>
             <div style="text-align: center" class="flex items-center justify-end mt-5">
+                @if (App\Models\User::isEditor())
+                    <a style="color: black" class="btn btn-primary" href={{ route('product.edit', $product) }} >
+                        <font size="5">Editar producto</font>
+                    </a>
+                @endif
                 <a style="color: black" class="btn btn-primary" href={{ route('cart.add', $product) }} >
                     <font size="5">Añadir al carrito</font>
-                    <img src="/img/add_carrito.png" width="50px" heigth="50px">
+                    <img src="/img/add_carrito.png" width="25px" heigth="25px">
                 </a>
             </div>
         </div>

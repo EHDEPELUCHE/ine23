@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Route;
+use App\Http\Middleware\CheckRoleEditor;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,8 +36,14 @@ Route::get('/user/logout',
 Route::get('/user', [UserController::class, 'edit'])
     ->name('user.edit');
 
+Route::get('/product/edit/{product}', [ProductController::class, 'edit'])
+    ->middleware('role.editor')->name('product.edit');
+
 Route::patch('/user', [UserController::class, 'update'])  
     ->name('user.update');
+
+Route::patch('/product/{product}', [ProductController::class, 'update'])  
+    ->name('product.update');
 
 Route::middleware([
     'auth:sanctum',
