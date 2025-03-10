@@ -36,4 +36,10 @@ class ProductController extends Controller
     public function edit(Product $product, Request $request) {
         return view('product.edit', compact('product'));
     }
+
+    //ESTO TAMBIÉN ES NUEVO
+    public function search(Request $request) {
+        $aProduct = Product::Search($request->search);
+        return view('product.search', compact('aProduct'));
+    }
 }

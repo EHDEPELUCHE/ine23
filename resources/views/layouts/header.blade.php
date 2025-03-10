@@ -29,7 +29,7 @@
       </ul>
       <form class="d-flex form-inline" role="search" METHOD= "GET" ACTION="buscador" >
         <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <button class="btn btn-outline-success" type="submit" href="{{ route('product.search') }}">Search</button>
       </form>
     </div>
   </div>

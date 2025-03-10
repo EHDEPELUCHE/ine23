@@ -19,7 +19,7 @@ class Product extends Model
     static function NewProducts() { 
         $sNow = date('Y-m-d H:i:s'); 
         return Product::where(DB::raw
-        ('date_format(DATE_ADD(updated_at , INTERVAL 200 DAY),  "%Y-%m-%d")'), '>=', date('Y-m-d', strtotime($sNow)))->get();
+        ('date_format(DATE_ADD(updated_at , INTERVAL 8 YEAR),  "%Y-%m-%d")'), '>=', date('Y-m-d', strtotime($sNow)))->get();
     } 
 
     function HasDiscount() {
@@ -35,5 +35,10 @@ class Product extends Model
 
     function Company(){
         return $this->belongsTo(Company::class);
+    }
+
+    //NUEVA FUNC Para cuando tengamos que buscar productos
+    function Search($sSearch) {
+        return Product::where('name', 'like', '%'.$sSearch.'%')->get();
     }
 }
