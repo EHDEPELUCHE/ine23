@@ -55,6 +55,5 @@ Route::middleware([
     })->name('dashboard');
 });
 
-//METER LA RUTA PARA BUSCADOR (ESTA HECHO POR COPILOT)
-Route::get('/search/{product}', [ProductController::class, 'search'])
+Route::get('/search', [ProductController::class, 'search'])
     ->name('product.search');

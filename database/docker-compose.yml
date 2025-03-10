@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  # Contenedor de MySQL
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_laravel
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ""                # Deja la contraseña en blanco (no usar esta)
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"      # Permite que el usuario root no tenga contraseña
+      MYSQL_DATABASE: ine23            # Base de datos por defecto
+      MYSQL_USER: laravel_user              # Usuario regular
+      MYSQL_PASSWORD: laravel_password      # Contraseña del usuario regular
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./ine23.sql:/docker-entrypoint-initdb.d/ine23.sql  # Carga el script SQL
+
+volumes:
+  mysql_data:
+    driver: local

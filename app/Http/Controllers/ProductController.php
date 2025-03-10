@@ -39,7 +39,8 @@ class ProductController extends Controller
 
     //ESTO TAMBIÉN ES NUEVO
     public function search(Request $request) {
-        $aProduct = Product::Search($request->search);
-        return view('product.search', compact('aProduct'));
+        $product = new Product();
+        $aProduct = $product->search($request->search);
+        return view('product.search', ['aProduct' => $aProduct]);
     }
 }
