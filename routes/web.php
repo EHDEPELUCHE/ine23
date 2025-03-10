@@ -55,5 +55,4 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::get('/search', [ProductController::class, 'search'])
-    ->name('product.search');
+Route::get('/search', [ProductController::class, 'search'])->name('product.search');

@@ -27,7 +27,7 @@
           <font color="white"> {{$items}}  </font>
         @endif
       </ul>
-      <form class="d-flex form-inline" role="search" METHOD="GET" ACTION="search">
+      <form class="d-flex form-inline" role="search" method="GET" action="{{ route('product.search') }}">
         <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="cadena" value="{{ request('cadena') }}">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>

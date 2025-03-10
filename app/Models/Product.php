@@ -39,7 +39,7 @@ class Product extends Model
 
     //NUEVA FUNC Para cuando tengamos que buscar productos
     function Search($sSearch) {
-        return Product::where('name', 'like', '%'.$sSearch.'%')
+        return Product::where('name', 'like', $sSearch.'%')
                       ->get();
     }
 
